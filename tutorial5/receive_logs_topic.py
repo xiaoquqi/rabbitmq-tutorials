@@ -11,7 +11,7 @@ if not binding_keys:
 connection = Connection('amqp://localhost//')
 
 with connection.channel() as channel:
-    channel.exchange_declare('direct_logs', 'topic')
+    channel.exchange_declare('topic_logs', 'topic')
     queue = channel.queue_declare(exclusive=False)
     queue_name = queue.queue
 

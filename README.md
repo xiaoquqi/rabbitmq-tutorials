@@ -1,9 +1,7 @@
-ABOUT
-=====
+# ABOUT
 
 RabbitMQ offical tutorials implemented by kombu.
 
-AUTHOR
-======
+# AUTHOR
 
 Ray Sun <xiaoquqi@gmail.com>

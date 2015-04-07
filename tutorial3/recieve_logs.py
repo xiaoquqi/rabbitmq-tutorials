@@ -6,6 +6,9 @@ connection = Connection('amqp://localhost//')
 
 with connection.channel() as channel:
     channel.exchange_declare('logs', 'fanout')
+    # Temporary queues, without name
+    # once we disconnect the consumer the queue should be deleted
+    # exclusive = True
     queue = channel.queue_declare(exclusive=False)
     queue_name = queue.queue
 

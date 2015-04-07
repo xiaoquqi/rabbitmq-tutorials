@@ -17,6 +17,7 @@ with connection.channel() as channel:
 
     # http://kombu.readthedocs.org/en/latest/reference/kombu.transport.pyamqp.html?highlight=basic_qos#kombu.transport.pyamqp.Connection.Channel.basic_qos
     # Connection.Channel.basic_qos(prefetch_size, prefetch_count, a_global)
+    # Fair dispatch
     channel.basic_qos(0, 1, False)
 
     channel.basic_consume(queue='task_queue', callback=callback)
